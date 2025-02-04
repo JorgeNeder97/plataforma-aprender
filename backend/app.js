@@ -6,7 +6,7 @@ const moment = require('moment-timezone');
 const adminRouter = require('#routes/admin');
 const formRouter = require('#routes/form');
 const userRouter = require('#routes/user');
-
+const indexRouter = require('#routes/index');
 
 
 
@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Rutas
-
+app.use('/', indexRouter)
 app.use('/admin', adminRouter);
 app.use('/form', formRouter);
 app.use('/user', userRouter);

@@ -19,4 +19,4 @@ const seccionController = {
 
 
 
-module.esports = seccionController;
+module.exports = seccionController;

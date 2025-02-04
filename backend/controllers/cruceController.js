@@ -13,7 +13,7 @@ const cruceController = {
 
     },
     obtenerCruces: (req, res) => {
-
+        
     },
 }
 
