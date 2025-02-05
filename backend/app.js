@@ -3,6 +3,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const moment = require('moment-timezone');
+require('dotenv').config();
 const adminRouter = require('#routes/admin');
 const formRouter = require('#routes/form');
 const userRouter = require('#routes/user');
