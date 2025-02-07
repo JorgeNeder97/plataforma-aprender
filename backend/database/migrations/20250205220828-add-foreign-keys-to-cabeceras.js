@@ -4,7 +4,7 @@
 module.exports = {
     async up(queryInterface, Sequelize) {
         await queryInterface.addConstraint('cabeceras', {
-            field: ['coordinador_id'],
+            fields: ['coordinador_id'],
             type: 'foreign key',
             name: 'fk_cabeceras_coordinador',
             references: {

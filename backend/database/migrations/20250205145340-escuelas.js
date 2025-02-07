@@ -40,12 +40,27 @@ module.exports = {
                 },
                 onDelete: 'RESTRICT',
             },
+            nivel_educativo_id: {
+                type: Sequelize.INTEGER.UNSIGNED,
+                allowNull: false,
+                references: {
+                    model: {
+                        tableName: 'nivel_educativo',
+                    },
+                    key: 'id',
+                },
+                onDelete: 'RESTRICT',
+            },
             direccion: {
                 type: Sequelize.STRING(250),
                 allowNull: true,
             },
             telefono: {
                 type: Sequelize.STRING(20),
+                allowNull: true,
+            },
+            email: {
+                type: Sequelize.STRING(150),
                 allowNull: true,
             },
             departamento_id: {
@@ -95,8 +110,14 @@ module.exports = {
                 // onDelete: 'SET NULL',
             },
             estado: {
-                type: Sequelize.TINYINT(1),
+                type: Sequelize.TINYINT(2),
                 allowNull: false,
+            },
+            createdAt: {
+                type: Sequelize.DATE,
+            },
+            updatedAt: {
+                type: Sequelize.DATE,
             },
         });
     },

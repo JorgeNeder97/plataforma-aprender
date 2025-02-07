@@ -29,6 +29,12 @@ module.exports = {
                 },
                 onDelete: 'RESTRICT',
             },
+            createdAt: {
+                type: Sequelize.DATE,
+            },
+            updatedAt: {
+                type: Sequelize.DATE,
+            },
         });
     },
 

@@ -46,7 +46,7 @@ module.exports = {
             },
             coordinador_id: {
                 type: Sequelize.INTEGER.UNSIGNED,
-                allowNull: false,
+                allowNull: true,
                 // Se agrega con una migración específica aparte.
                 // references: {
                 //     model: {
@@ -70,6 +70,12 @@ module.exports = {
             estado: {
                 type: Sequelize.TINYINT(1),
                 allowNull: false,
+            },
+            createdAt: {
+                type: Sequelize.DATE,
+            },
+            updatedAt: {
+                type: Sequelize.DATE,
             },
         });
     },

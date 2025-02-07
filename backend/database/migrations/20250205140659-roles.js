@@ -13,7 +13,13 @@ module.exports = {
             nombre: {
                 type: Sequelize.STRING(10),
                 allowNull: false,
-            }
+            },
+            createdAt: {
+                type: Sequelize.DATE,
+            },
+            updatedAt: {
+                type: Sequelize.DATE,
+            },
         });
     },
 

@@ -14,6 +14,23 @@ module.exports = {
                 type: Sequelize.STRING(400),
                 allowNull: false,
             },
+            operativo_id: {
+                type: Sequelize.INTEGER.UNSIGNED,
+                allowNull: false,
+                references: {
+                    model: {
+                        tableName: "operativos",
+                    },
+                    key: "id",
+                },
+                onDelete: "CASCADE",
+            },
+            createdAt: {
+                type: Sequelize.DATE,
+            },
+            updatedAt: {
+                type: Sequelize.DATE,
+            },
         });
     },
 
