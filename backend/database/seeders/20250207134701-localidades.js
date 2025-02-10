@@ -120,11 +120,6 @@ module.exports = {
                 departamento_id: 19,
             },
             {
-                nombre: "No Figura En Tabla",
-                codigo_postal: "G4197",
-                departamento_id: 19,
-            },
-            {
                 nombre: "San Carlos",
                 codigo_postal: "G4197",
                 departamento_id: 19,
@@ -2780,7 +2775,7 @@ module.exports = {
                 departamento_id: 21,
             },
             {
-                nombre: "Cha�ar Pozo De Abajo",
+                nombre: "Chaï¿½ar Pozo De Abajo",
                 codigo_postal: "G4220",
                 departamento_id: 21,
             },
@@ -2790,7 +2785,7 @@ module.exports = {
                 departamento_id: 21,
             },
             {
-                nombre: "Se�ora Pujio",
+                nombre: "Seï¿½ora Pujio",
                 codigo_postal: "G4300",
                 departamento_id: 5,
             },
@@ -4433,6 +4428,976 @@ module.exports = {
                 nombre: "Guampacha",
                 codigo_postal: "",
                 departamento_id: 12,
+            },
+            {
+                nombre: "Monte Quemado",
+                codigo_postal: "G3714",
+                departamento_id: 19,
+            },
+            {
+                nombre: "Santa Rosa",
+                codigo_postal: "G3741",
+                departamento_id: 2,
+            },
+            {
+                nombre: "La Manga",
+                codigo_postal: "G4301",
+                departamento_id: 2,
+            },
+            {
+                nombre: "La Fortuna",
+                codigo_postal: "G3747",
+                departamento_id: 2,
+            },
+            {
+                nombre: "El Porvenir",
+                codigo_postal: "G3747",
+                departamento_id: 2,
+            },
+            {
+                nombre: "Upianita",
+                codigo_postal: "G4200",
+                departamento_id: 7,
+            },
+            {
+                nombre: "Campo Alegre",
+                codigo_postal: "G4328",
+                departamento_id: 4,
+            },
+            {
+                nombre: "La Paloma",
+                codigo_postal: "G3736",
+                departamento_id: 17,
+            },
+            {
+                nombre: "El Saladillo",
+                codigo_postal: "G3741",
+                departamento_id: 14,
+            },
+            {
+                nombre: "Sol De Mayo",
+                codigo_postal: "G4203",
+                departamento_id: 8,
+            },
+            {
+                nombre: "Santa Cruz",
+                codigo_postal: "G4301",
+                departamento_id: 8,
+            },
+            {
+                nombre: "Santo Domingo",
+                codigo_postal: "G4326",
+                departamento_id: 4,
+            },
+            {
+                nombre: "Santa Rosa",
+                codigo_postal: "G4334",
+                departamento_id: 4,
+            },
+            {
+                nombre: "San Roque",
+                codigo_postal: "G4326",
+                departamento_id: 4,
+            },
+            {
+                nombre: "San Pedro",
+                codigo_postal: "G4326",
+                departamento_id: 4,
+            },
+            {
+                nombre: "San Antonio",
+                codigo_postal: "G4326",
+                departamento_id: 4,
+            },
+            {
+                nombre: "El Puestito",
+                codigo_postal: "G4230",
+                departamento_id: 8,
+            },
+            {
+                nombre: "El Barrial",
+                codigo_postal: "G4300",
+                departamento_id: 5,
+            },
+            {
+                nombre: "Santa Rosa",
+                codigo_postal: "G4321",
+                departamento_id: 24,
+            },
+            {
+                nombre: "Lomas Blancas",
+                codigo_postal: "G5253",
+                departamento_id: 24,
+            },
+            {
+                nombre: "El Simbolar",
+                codigo_postal: "G4321",
+                departamento_id: 24,
+            },
+            {
+                nombre: "Pozo Grande",
+                codigo_postal: "G5250",
+                departamento_id: 18,
+            },
+            {
+                nombre: "La Candelaria",
+                codigo_postal: "G4452",
+                departamento_id: 9,
+            },
+            {
+                nombre: "Rumi Pozo",
+                codigo_postal: "G3714",
+                departamento_id: 9,
+            },
+            {
+                nombre: "Toro Pozo",
+                codigo_postal: 4420,
+                departamento_id: 9,
+            },
+            {
+                nombre: "Santa Rosa",
+                codigo_postal: "G4301",
+                departamento_id: 9,
+            },
+            {
+                nombre: "Las Lomas",
+                codigo_postal: "G3712",
+                departamento_id: 9,
+            },
+            {
+                nombre: "Pozo Grande",
+                codigo_postal: "G4320",
+                departamento_id: 21,
+            },
+            {
+                nombre: "La Soledad",
+                codigo_postal: "G4225",
+                departamento_id: 21,
+            },
+            {
+                nombre: "San Carlos",
+                codigo_postal: "G4225",
+                departamento_id: 21,
+            },
+            {
+                nombre: "El Desvio",
+                codigo_postal: "G5253",
+                departamento_id: 20,
+            },
+            {
+                nombre: "El Albardon",
+                codigo_postal: "G4321",
+                departamento_id: 24,
+            },
+            {
+                nombre: "San Carlos",
+                codigo_postal: "G5253",
+                departamento_id: 20,
+            },
+            {
+                nombre: "San Francisco",
+                codigo_postal: "G5253",
+                departamento_id: 20,
+            },
+            {
+                nombre: "San Juan",
+                codigo_postal: "G5253",
+                departamento_id: 20,
+            },
+            {
+                nombre: "Taco Pozo",
+                codigo_postal: "G5255",
+                departamento_id: 20,
+            },
+            {
+                nombre: "Los Ralos",
+                codigo_postal: "G4184",
+                departamento_id: 13,
+            },
+            {
+                nombre: "San Jose",
+                codigo_postal: "G4184",
+                departamento_id: 13,
+            },
+            {
+                nombre: "Bajo Hondo",
+                codigo_postal: "G4187",
+                departamento_id: 13,
+            },
+            {
+                nombre: "La Fortuna",
+                codigo_postal: "G4187",
+                departamento_id: 13,
+            },
+            {
+                nombre: "San Antonio",
+                codigo_postal: "G4187",
+                departamento_id: 13,
+            },
+            {
+                nombre: "San Andres",
+                codigo_postal: "G4187",
+                departamento_id: 13,
+            },
+            {
+                nombre: "La Verde",
+                codigo_postal: "G4187",
+                departamento_id: 25,
+            },
+            {
+                nombre: "San Nicolas",
+                codigo_postal: "G4321",
+                departamento_id: 5,
+            },
+            {
+                nombre: "San Isidro",
+                codigo_postal: "G3714",
+                departamento_id: 5,
+            },
+            {
+                nombre: "Puesto Del Medio",
+                codigo_postal: "G4338",
+                departamento_id: 5,
+            },
+            {
+                nombre: "Las Abras",
+                codigo_postal: "G4338",
+                departamento_id: 5,
+            },
+            {
+                nombre: "San Juan",
+                codigo_postal: "G4339",
+                departamento_id: 5,
+            },
+            {
+                nombre: "Quimili",
+                codigo_postal: "G4322",
+                departamento_id: 26,
+            },
+            {
+                nombre: "Suri Pozo",
+                codigo_postal: "G5250",
+                departamento_id: 18,
+            },
+            {
+                nombre: "Jumialito",
+                codigo_postal: "G4353",
+                departamento_id: 10,
+            },
+            {
+                nombre: "La Candelaria",
+                codigo_postal: "G4353",
+                departamento_id: 10,
+            },
+            {
+                nombre: "Pampa Muyoj",
+                codigo_postal: "G4354",
+                departamento_id: 10,
+            },
+            {
+                nombre: "San Felix",
+                codigo_postal: "G4353",
+                departamento_id: 10,
+            },
+            {
+                nombre: "Santo Domingo",
+                codigo_postal: 4350,
+                departamento_id: 10,
+            },
+            {
+                nombre: "Tusca Pozo",
+                codigo_postal: "G4353",
+                departamento_id: 10,
+            },
+            {
+                nombre: "El Albardon",
+                codigo_postal: "G4301",
+                departamento_id: 10,
+            },
+            {
+                nombre: "La Esperanza",
+                codigo_postal: "G4351",
+                departamento_id: 10,
+            },
+            {
+                nombre: "La Ramada",
+                codigo_postal: "G4301",
+                departamento_id: 10,
+            },
+            {
+                nombre: "Nueva Esperanza",
+                codigo_postal: 4301,
+                departamento_id: 10,
+            },
+            {
+                nombre: "Colonia Alpina",
+                codigo_postal: "G4301",
+                departamento_id: 10,
+            },
+            {
+                nombre: "San Jose",
+                codigo_postal: 4353,
+                departamento_id: 10,
+            },
+            {
+                nombre: "Tala Pozo",
+                codigo_postal: "G4220",
+                departamento_id: 21,
+            },
+            {
+                nombre: "Puesto Nuevo",
+                codigo_postal: "G4197",
+                departamento_id: 21,
+            },
+            {
+                nombre: "Chañar Pozo De Abajo",
+                codigo_postal: "G4220",
+                departamento_id: 21,
+            },
+            {
+                nombre: "Señora Pujio",
+                codigo_postal: "G4300",
+                departamento_id: 5,
+            },
+            {
+                nombre: "San Ramon",
+                codigo_postal: "G4302",
+                departamento_id: 5,
+            },
+            {
+                nombre: "San Pablo",
+                codigo_postal: "G4220",
+                departamento_id: 21,
+            },
+            {
+                nombre: "Beltran",
+                codigo_postal: "G4208",
+                departamento_id: 15,
+            },
+            {
+                nombre: "San Jose",
+                codigo_postal: "G4208",
+                departamento_id: 15,
+            },
+            {
+                nombre: "Santa Rosa",
+                codigo_postal: "G4208",
+                departamento_id: 15,
+            },
+            {
+                nombre: "Suri Pozo",
+                codigo_postal: "G4300",
+                departamento_id: 5,
+            },
+            {
+                nombre: "San Felipe",
+                codigo_postal: "G4300",
+                departamento_id: 5,
+            },
+            {
+                nombre: "San Carlos",
+                codigo_postal: "G4300",
+                departamento_id: 5,
+            },
+            {
+                nombre: "San Jose",
+                codigo_postal: "G4300",
+                departamento_id: 5,
+            },
+            {
+                nombre: "Santa Lucia",
+                codigo_postal: "G3062",
+                departamento_id: 6,
+            },
+            {
+                nombre: "Ahi Veremos",
+                codigo_postal: "G3714",
+                departamento_id: 9,
+            },
+            {
+                nombre: "Vinal Pozo",
+                codigo_postal: "G3714",
+                departamento_id: 9,
+            },
+            {
+                nombre: "San Jose",
+                codigo_postal: "G3714",
+                departamento_id: 9,
+            },
+            {
+                nombre: "San Javier",
+                codigo_postal: "G3714",
+                departamento_id: 9,
+            },
+            {
+                nombre: "Santa Cruz",
+                codigo_postal: "G3714",
+                departamento_id: 9,
+            },
+            {
+                nombre: "Lujan",
+                codigo_postal: "G3714",
+                departamento_id: 9,
+            },
+            {
+                nombre: "La Cañada",
+                codigo_postal: "G3714",
+                departamento_id: 9,
+            },
+            {
+                nombre: "Pampa Pozo",
+                codigo_postal: "G4203",
+                departamento_id: 12,
+            },
+            {
+                nombre: "Pozo Cavado",
+                codigo_postal: "G4238",
+                departamento_id: 12,
+            },
+            {
+                nombre: "Puesto Del Medio",
+                codigo_postal: "G4238",
+                departamento_id: 12,
+            },
+            {
+                nombre: "Las Chacras",
+                codigo_postal: "G4225",
+                departamento_id: 12,
+            },
+            {
+                nombre: "Puerta Grande",
+                codigo_postal: "G4225",
+                departamento_id: 12,
+            },
+            {
+                nombre: "San Ramon",
+                codigo_postal: "G4238",
+                departamento_id: 12,
+            },
+            {
+                nombre: "Santa Catalina",
+                codigo_postal: "G4203",
+                departamento_id: 12,
+            },
+            {
+                nombre: "Santa Maria",
+                codigo_postal: "G4206",
+                departamento_id: 7,
+            },
+            {
+                nombre: "San Jose",
+                codigo_postal: "G4200",
+                departamento_id: 7,
+            },
+            {
+                nombre: "Pozo Cavado",
+                codigo_postal: "G4200",
+                departamento_id: 7,
+            },
+            {
+                nombre: "Pampa Muyoj",
+                codigo_postal: "G4201",
+                departamento_id: 7,
+            },
+            {
+                nombre: "Averias",
+                codigo_postal: 3766,
+                departamento_id: 11,
+            },
+            {
+                nombre: "San Francisco",
+                codigo_postal: "G4351",
+                departamento_id: 17,
+            },
+            {
+                nombre: "San Antonio",
+                codigo_postal: "G4351",
+                departamento_id: 17,
+            },
+            {
+                nombre: "Suri Pozo",
+                codigo_postal: "G4353",
+                departamento_id: 17,
+            },
+            {
+                nombre: "Nueva Esperanza",
+                codigo_postal: "G4197",
+                departamento_id: 19,
+            },
+            {
+                nombre: "Santa Rosa",
+                codigo_postal: "G3740",
+                departamento_id: 17,
+            },
+            {
+                nombre: "El Simbolar",
+                codigo_postal: "G4197",
+                departamento_id: 19,
+            },
+            {
+                nombre: "San Antonio",
+                codigo_postal: "G4350",
+                departamento_id: 14,
+            },
+            {
+                nombre: "Nueva Esperanza",
+                codigo_postal: "G4301",
+                departamento_id: 2,
+            },
+            {
+                nombre: "Santo Domingo",
+                codigo_postal: "G3714",
+                departamento_id: 9,
+            },
+            {
+                nombre: "Sol De Mayo",
+                codigo_postal: "G4201",
+                departamento_id: 7,
+            },
+            {
+                nombre: "Lujan",
+                codigo_postal: "G4332",
+                departamento_id: 4,
+            },
+            {
+                nombre: "San Pedro",
+                codigo_postal: "G4200",
+                departamento_id: 8,
+            },
+            {
+                nombre: "Monte Redondo",
+                codigo_postal: "G4200",
+                departamento_id: 8,
+            },
+            {
+                nombre: "Santa Elena",
+                codigo_postal: "G4300",
+                departamento_id: 5,
+            },
+            {
+                nombre: "La Bajada",
+                codigo_postal: "G4321",
+                departamento_id: 24,
+            },
+            {
+                nombre: "La Higuera",
+                codigo_postal: "G4208",
+                departamento_id: 27,
+            },
+            {
+                nombre: "San Vicente",
+                codigo_postal: "G4206",
+                departamento_id: 27,
+            },
+            {
+                nombre: "Huachana",
+                codigo_postal: "G4206",
+                departamento_id: 27,
+            },
+            {
+                nombre: "Campo Alegre",
+                codigo_postal: "G4206",
+                departamento_id: 27,
+            },
+            {
+                nombre: "San Gregorio",
+                codigo_postal: "G4208",
+                departamento_id: 15,
+            },
+            {
+                nombre: "La Florida",
+                codigo_postal: "G4308",
+                departamento_id: 23,
+            },
+            {
+                nombre: "Lomitas",
+                codigo_postal: "G4322",
+                departamento_id: 23,
+            },
+            {
+                nombre: "Puesto Nuevo",
+                codigo_postal: "G4322",
+                departamento_id: 23,
+            },
+            {
+                nombre: "San Ramon",
+                codigo_postal: "G4322",
+                departamento_id: 23,
+            },
+            {
+                nombre: "San Jose",
+                codigo_postal: "G4208",
+                departamento_id: 25,
+            },
+            {
+                nombre: "Percas",
+                codigo_postal: "G4324",
+                departamento_id: 25,
+            },
+            {
+                nombre: "Villa Nueva",
+                codigo_postal: "G4313",
+                departamento_id: 25,
+            },
+            {
+                nombre: "Santo Domingo",
+                codigo_postal: "G4302",
+                departamento_id: 23,
+            },
+            {
+                nombre: "San Nicolas",
+                codigo_postal: "G5253",
+                departamento_id: 16,
+            },
+            {
+                nombre: "Gramilla",
+                codigo_postal: "G4304",
+                departamento_id: 13,
+            },
+            {
+                nombre: "Toro Pozo",
+                codigo_postal: 4306,
+                departamento_id: 13,
+            },
+            {
+                nombre: "La Higuera",
+                codigo_postal: "G4208",
+                departamento_id: 25,
+            },
+            {
+                nombre: "San Lorenzo",
+                codigo_postal: "G4300",
+                departamento_id: 5,
+            },
+            {
+                nombre: "La Cañada",
+                codigo_postal: "G4354",
+                departamento_id: 10,
+            },
+            {
+                nombre: "Jumial Grande",
+                codigo_postal: "G4353",
+                departamento_id: 10,
+            },
+            {
+                nombre: "San Felipe",
+                codigo_postal: "G4301",
+                departamento_id: 10,
+            },
+            {
+                nombre: "San Roque",
+                codigo_postal: 4301,
+                departamento_id: 10,
+            },
+            {
+                nombre: "Santa Ana",
+                codigo_postal: 4301,
+                departamento_id: 10,
+            },
+            {
+                nombre: "La Falda",
+                codigo_postal: "G4300",
+                departamento_id: 5,
+            },
+            {
+                nombre: "El Porvenir",
+                codigo_postal: 4220,
+                departamento_id: 21,
+            },
+            {
+                nombre: "Jumi Pozo",
+                codigo_postal: "G4208",
+                departamento_id: 15,
+            },
+            {
+                nombre: "Lomitas",
+                codigo_postal: "G4208",
+                departamento_id: 15,
+            },
+            {
+                nombre: "Monte Redondo",
+                codigo_postal: "G4212",
+                departamento_id: 15,
+            },
+            {
+                nombre: "San Juan",
+                codigo_postal: "G4208",
+                departamento_id: 15,
+            },
+            {
+                nombre: "San Vicente",
+                codigo_postal: 4208,
+                departamento_id: 15,
+            },
+            {
+                nombre: "Tio Pozo",
+                codigo_postal: "G4208",
+                departamento_id: 15,
+            },
+            {
+                nombre: "Los Cerrillos",
+                codigo_postal: "G4203",
+                departamento_id: 12,
+            },
+            {
+                nombre: "Lujan",
+                codigo_postal: "G3760",
+                departamento_id: 12,
+            },
+            {
+                nombre: "San Pedro",
+                codigo_postal: "G4238",
+                departamento_id: 12,
+            },
+            {
+                nombre: "San Pedro",
+                codigo_postal: "G4206",
+                departamento_id: 7,
+            },
+            {
+                nombre: "Puesto Del Medio",
+                codigo_postal: "G4200",
+                departamento_id: 7,
+            },
+            {
+                nombre: "La Fortuna",
+                codigo_postal: "G4351",
+                departamento_id: 17,
+            },
+            {
+                nombre: "Santa Lucia",
+                codigo_postal: "G4319",
+                departamento_id: 17,
+            },
+            {
+                nombre: "El Arenal",
+                codigo_postal: "G4197",
+                departamento_id: 19,
+            },
+            {
+                nombre: "La Estancia",
+                codigo_postal: "G3760",
+                departamento_id: 11,
+            },
+            {
+                nombre: "El Rincon",
+                codigo_postal: "G3714",
+                departamento_id: 9,
+            },
+            {
+                nombre: "San Pedro",
+                codigo_postal: "G4324",
+                departamento_id: 26,
+            },
+            {
+                nombre: "Pozo Mosoj",
+                codigo_postal: "G4200",
+                departamento_id: 4,
+            },
+            {
+                nombre: "Abra Grande",
+                codigo_postal: "G4200",
+                departamento_id: 7,
+            },
+            {
+                nombre: "Santa Maria",
+                codigo_postal: "G4353",
+                departamento_id: 10,
+            },
+            {
+                nombre: "Donadeu",
+                codigo_postal: "G3743",
+                departamento_id: 17,
+            },
+            {
+                nombre: "Ahi Veremos",
+                codigo_postal: "G3731",
+                departamento_id: 2,
+            },
+            {
+                nombre: "Quimilioj",
+                codigo_postal: "G4313",
+                departamento_id: 25,
+            },
+            {
+                nombre: "El Bajo",
+                codigo_postal: "G5255",
+                departamento_id: 20,
+            },
+            {
+                nombre: "Santos Lugares",
+                codigo_postal: "G3743",
+                departamento_id: 17,
+            },
+            {
+                nombre: "Santa Maria",
+                codigo_postal: "G4200",
+                departamento_id: 9,
+            },
+            {
+                nombre: "Chañar Pozo",
+                codigo_postal: "G4200",
+                departamento_id: 10,
+            },
+            {
+                nombre: "Puesto Nuevo",
+                codigo_postal: "G4200",
+                departamento_id: 7,
+            },
+            {
+                nombre: "Santo Domingo",
+                codigo_postal: "G4200",
+                departamento_id: 2,
+            },
+            {
+                nombre: "Ventura Pampa",
+                codigo_postal: "G4317",
+                departamento_id: 3,
+            },
+            {
+                nombre: "Santo Domingo",
+                codigo_postal: "G4200",
+                departamento_id: 12,
+            },
+            {
+                nombre: "Los Quebrachos",
+                codigo_postal: "G4200",
+                departamento_id: 13,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 1,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 2,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 3,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 4,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 5,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 6,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 7,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 8,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 9,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 10,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 11,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 12,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 13,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 14,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 15,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 16,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 17,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 18,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 19,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 20,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 21,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 22,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 23,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 24,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 25,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 26,
+            },
+            {
+                nombre: "No figura en la tabla",
+                codigo_postal: "",
+                departamento_id: 27,
             },
         ]);
     },

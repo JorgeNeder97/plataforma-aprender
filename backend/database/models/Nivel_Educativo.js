@@ -22,7 +22,15 @@ module.exports = (sequelize, DataTypes) => {
     const Nivel_Educativo = sequelize.define(alias, cols, config);
 
     Nivel_Educativo.associate = (models) => {
+        Nivel_Educativo.hasMany(models.Escuela, {
+            as: 'escuela_nivel_educativo',
+            foreignKey: 'nivel_educativo_id',
+        });
 
+        Nivel_Educativo.hasMany(models.Operativo, {
+            as: 'operativo_nivel_educativo',
+            foreignKey: 'nivel_educativo_id',
+        });
     };
 
     return Nivel_Educativo;

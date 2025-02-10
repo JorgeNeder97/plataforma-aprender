@@ -53,7 +53,15 @@ module.exports = (sequelize, DataTypes) => {
     const Coordinador = sequelize.define(alias, cols, config);
 
     Coordinador.associate = (models) => {
-
+        Coordinador.belongsTo(models.Operativo, {
+            as: 'coordinador_operativo',
+            foreignKey: 'operativo_id',
+        });
+        
+        Coordinador.belongsTo(models.Cabecera, {
+            as: 'cabecera_coordinador',
+            foreignKey: 'coordinador_id',
+        });
     };
 
     return Coordinador;

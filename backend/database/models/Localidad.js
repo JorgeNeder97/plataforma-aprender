@@ -37,7 +37,20 @@ module.exports = (sequelize, DataTypes) => {
     const Localidad = sequelize.define(alias, cols, config);
 
     Localidad.associate = (models) => {
+        Localidad.belongsTo(models.Departamento, {
+            as: 'localidad_departamento',
+            foreignKey: 'departamento_id',
+        });
 
+        Localidad.hasMany(models.Escuela, {
+            as: 'escuela_localidad',
+            foreignKey: 'localidad_id',
+        });
+
+        Localidad.hasMany(models.Cabecera, {
+            as: 'cabecera_localidad',
+            foreignKey: 'localidad_id',
+        });
     };
 
     return Localidad;

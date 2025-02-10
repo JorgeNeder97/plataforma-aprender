@@ -81,7 +81,30 @@ module.exports = (sequelize, DataTypes) => {
     const Cruce = sequelize.define(alias, cols, config);
 
     Cruce.associate = (models) => {
+        Cruce.belongsTo(models.Seccion, {
+            as: 'cruce_seccion_uno',
+            foreignKey: 'seccion_uno_id',
+        });
 
+        Cruce.belongsTo(models.Seccion, {
+            as: 'cruce_seccion_dos',
+            foreignKey: 'seccion_dos_id',
+        });
+
+        Cruce.belongsTo(models.Aplicador, {
+            as: 'cruce_aplicador_uno',
+            foreignKey: 'aplicador_uno_id',
+        });
+
+        Cruce.belongsTo(models.Aplicador, {
+            as: 'cruce_aplicador_dos',
+            foreignKey: 'aplicador_dos_id',
+        });
+
+        Cruce.belongsTo(models.Operativo, {
+            as: 'cruce_operativo',
+            foreignKey: 'operativo_id',
+        });
     };
 
     return Cruce;

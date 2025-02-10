@@ -119,7 +119,45 @@ module.exports = (sequelize, DataTypes) => {
     const Escuela = sequelize.define(alias, cols, config);
 
     Escuela.associate = (models) => {
+        Escuela.belongsTo(models.Ambito, {
+            as: 'escuela_ambito',
+            foreignKey: 'ambito_id',
+        });
 
+        Escuela.belongsTo(models.Sistema_Gestion, {
+            as: 'escuela_sistema_gestion',
+            foreignKey: 'sistema_gestion_id',
+        });
+
+        Escuela.belongsTo(models.Nivel_Educativo, {
+            as: 'escuela_nivel_educativo',
+            foreignKey: 'nivel_educativo_id',
+        });
+
+        Escuela.belongsTo(models.Departamento, {
+            as: 'escuela_departamento',
+            foreignKey: 'departamento_id',
+        });
+
+        Escuela.belongsTo(models.Localidad, {
+            as: 'escuela_localidad',
+            foreignKey: 'localidad_id',
+        });
+
+        Escuela.belongsTo(models.Cabecera, {
+            as: 'escuela_cabecera',
+            foreignKey: 'cabecera_id',
+        });
+
+        Escuela.belongsTo(models.Veedor, {
+            as: 'escuela_veedor',
+            foreignKey: 'veedor_id',
+        });
+
+        Escuela.hasMany(models.Seccion, {
+            as: 'escuela_seccion',
+            foreignKey: 'escuela_id',
+        });
     };
 
     return Escuela;

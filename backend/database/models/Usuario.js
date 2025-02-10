@@ -37,7 +37,10 @@ module.exports = (sequelize, DataTypes) => {
     const Usuario = sequelize.define(alias, cols, config);
 
     Usuario.associate = (models) => {
-
+        Usuario.belongsTo(models.Rol, {
+            as: 'usuario_rol',
+            foreignKey: 'rol_id',
+        });
     };
 
     return Usuario;

@@ -45,7 +45,50 @@ module.exports = (sequelize, DataTypes) => {
     const Operativo = sequelize.define(alias, cols, config);
 
     Operativo.associate = (models) => {
+        Operativo.hasMany(models.Aplicador, {
+            as: 'aplicador_operativo',
+            foreignKey: 'operativo_id',
+        });
 
+        Operativo.hasMany(models.Veedor, {
+            as: 'veedor_operativo',
+            foreignKey: 'operativo_id',
+        });
+
+        Operativo.hasMany(models.Coordinador, {
+            as: 'coordinador_operativo',
+            foreignKey: 'operativo_id',
+        });
+
+        Operativo.hasMany(models.Cabecera, {
+            as: 'cabecera_operativo',
+            foreignKey: 'operativo_id',
+        });
+
+        Operativo.hasMany(models.Cruces, {
+            as: 'cruce_operativo',
+            foreignKey: 'operativo_id',
+        });
+
+        Operativo.hasOne(models.Dato_Estadistico, {
+            as: 'dato_estadistico_operativo',
+            foreignKey: 'operativo_id',
+        });
+        
+        Operativo.hasMany(models.Foto, {
+            as: 'foto_operativo',
+            foreignKey: 'operativo_id',
+        });
+
+        Operativo.hasMany(models.Material, {
+            as: 'material_operativo',
+            foreignKey: 'operativo_id',
+        });
+
+        Operativo.belongsTo(models.Nivel_Educativo, {
+            as: 'operativo_nivel_educativo',
+            foreignKey: 'nivel_educativo_id',
+        });
     };
 
     return Operativo;

@@ -32,5 +32,12 @@ module.exports = (sequelize, DataTypes) => {
 
     const Foto = sequelize.define(alias, cols, config);
 
+    Foto.associate = (models) => {
+        Foto.belongsTo(models.Operativo, {
+            as: 'foto_operativo',
+            foreignKey: 'operativo_id',
+        });
+    }
+
     return Foto;
 };

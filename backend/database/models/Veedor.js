@@ -53,7 +53,16 @@ module.exports = (sequelize, DataTypes) => {
     const Veedor = sequelize.define(alias, cols, config);
 
     Veedor.associate = (models) => {
+        Veedor.belongsTo(models.Operativo, {
+            as: 'veedor_operativo',
+            foreignKey: 'operativo_id',
+        });
 
+        Veedor.hasOne(models.Escuela, {
+            as: 'escuela_veedor',
+            foreignKey: 'veedor_id',
+        });
+        
     };
 
     return Veedor;

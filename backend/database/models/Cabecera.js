@@ -78,7 +78,30 @@ module.exports = (sequelize, DataTypes) => {
     const Cabecera = sequelize.define(alias, cols, config);
 
     Cabecera.associate = (models) => {
+        Cabecera.belongsTo(models.Departamento, {
+            as: 'cabecera_departamento',
+            foreignKey: 'departamento_id',
+        });
 
+        Cabecera.belongsTo(models.Localidad, {
+            as: 'cabecera_localidad',
+            foreignKey: 'localidad_id',
+        });
+
+        Cabecera.hasOne(models.Coodinador, {
+            as: 'cabecera_coordinador',
+            foreignKey: 'coordinador_id',
+        });
+
+        Cabecera.belongsTo(models.Operativo, {
+            as: 'cabecera_operativo',
+            foreignKey: 'operativo_id',
+        });
+
+        Cabecera.hasMany(models.Escuela, {
+            as: 'escuela_cabecera',
+            foreignKey: 'cabecera_id',
+        });
     };
 
     return Cabecera;

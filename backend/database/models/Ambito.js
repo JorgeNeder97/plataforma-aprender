@@ -22,7 +22,15 @@ module.exports = (sequelize, DataTypes) => {
     const Ambito = sequelize.define(alias, cols, config);
 
     Ambito.associate = (models) => {
+        Ambito.hasMany(models.Escuela, {
+            as: 'escuela_ambito',
+            foreignKey: 'ambito_id',
+        });
 
+        Ambito.hasMany(models.Aplicador, {
+            as: 'aplicador_ambito',
+            foreignKey: 'ambito_id',
+        });
     };
 
     return Ambito;

@@ -57,7 +57,10 @@ module.exports = (sequelize, DataTypes) => {
     const Dato_Estadistico = sequelize.define(alias, cols, config);
 
     Dato_Estadistico.associate = (models) => {
-
+        Dato_Estadistico.belongsTo(models.Operativo, {
+            as: 'dato_estadistico_operativo',
+            foreignKey: 'operativo_id',
+        });
     };
 
     return Dato_Estadistico;

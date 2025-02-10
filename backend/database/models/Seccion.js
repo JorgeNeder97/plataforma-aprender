@@ -56,7 +56,25 @@ module.exports = (sequelize, DataTypes) => {
     const Seccion = sequelize.define(alias, cols, config);
 
     Seccion.associate = (models) => {
+        Seccion.belongsTo(models.Aplicador, {
+            as: 'aplicador_seccion',
+            foreignKey: 'aplicador_id',
+        });
 
+        Seccion.belongsTo(models.Escuela, {
+            as: 'escuela_seccion',
+            foreignKey: 'escuela_id',
+        });
+
+        Seccion.hasOne(models.Cruce, {
+            as: 'cruce_seccion_uno',
+            foreignKey: 'seccion_uno_id',
+        });
+
+        Seccion.hasOne(models.Cruce, {
+            as: 'cruce_seccion_dos',
+            foreignKey: 'seccion_dos_id',
+        });
     };
 
     return Seccion;

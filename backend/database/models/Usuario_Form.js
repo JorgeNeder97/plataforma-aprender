@@ -26,9 +26,5 @@ module.exports = (sequelize, DataTypes) => {
 
     const Usuario_Form = sequelize.define(alias, cols, config);
 
-    Usuario_Form.associate = (models) => {
-
-    };
-
     return Usuario_Form;
 };

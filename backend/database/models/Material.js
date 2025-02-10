@@ -33,7 +33,10 @@ module.exports = (sequelize, DataTypes) => {
     const Material = sequelize.define(alias, cols, config);
 
     Material.associate = (models) => {
-
+        Material.belongsTo(models.Operativo, {
+            as: 'material_operativo',
+            foreignKey: 'operativo_id',
+        });
     };
 
     return Material;

@@ -60,7 +60,30 @@ module.exports = (sequelize, DataTypes) => {
     const Aplicador = sequelize.define(alias, cols, config);
 
     Aplicador.associate = (models) => {
+        Aplicador.belongsTo(models.Ambito, {
+            as: 'aplicador_ambito',
+            foreignKey: 'ambito_id',
+        });
 
+        Aplicador.belongsTo(models.Operativo, {
+            as: 'aplicador_operativo',
+            foreignKey: 'operativo_id',
+        });
+
+        Aplicador.hasOne(models.Seccion, {
+            as: 'aplicador_seccion',
+            foreignKey: 'aplicador_id',
+        });
+
+        Aplicador.hasOne(models.Cruce, {
+            as: 'cruce_aplicador_uno',
+            foreignKey: 'aplicador_uno_id',
+        });
+
+        Aplicador.hasOne(models.Cruce, {
+            as: 'cruce_aplicador_dos',
+            foreignKey: 'aplicador_dos_id',
+        });
     };
 
     return Aplicador;

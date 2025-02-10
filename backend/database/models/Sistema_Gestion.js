@@ -22,7 +22,11 @@ module.exports = (sequelize, DataTypes) => {
     const Sistema_Gestion = sequelize.define(alias, cols, config);
 
     Sistema_Gestion.associate = (models) => {
-
+        Sistema_Gestion.hasMany(models.Escuela, {
+            as: 'escuela_sistema_gestion',
+            foreignKey: 'sistema_gestion_id',
+        });
+        
     };
 
     return Sistema_Gestion;
