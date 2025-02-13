@@ -1,5 +1,30 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+    themes: false
+}
 
 @theme {
-    
+    --color-bg: #FFFFFE;
+    --color-bg-alter: #D8EEFE;
+    --color-primary: #094067;
+    --color-paragraph: #5F6C7B;
+    --color-accent: #3DA9FC;
+    --color-secondary: #90B4CE;
+    --color-tertiary: #EF4565;
+
+
+    --font-default: 'Poppins';
+}
+
+@layer components {
+    .nav-link {
+        @apply text-bg font-medium text-[16px] outline-none
+        hover:text-primary transition-all duration-[.3s] ease-in
+    }
+
+    .menu-mobile {
+        @apply fixed top-[81px] right-0 z-40 translate-x-[100%] bg-accent w-[65vw] max-w-[400px] h-screen flex flex-col
+        place-items-center text-[18px] text-bg
+        transition-transform duration-[.8s] ease-in-out
+    }
 }
