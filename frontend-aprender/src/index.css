@@ -12,7 +12,6 @@
     --color-secondary: #90B4CE;
     --color-tertiary: #EF4565;
 
-
     --font-default: 'Poppins';
 }
 
@@ -23,7 +22,7 @@
     }
 
     .menu-mobile {
-        @apply fixed top-[81px] right-0 z-40 translate-x-[100%] bg-accent w-[65vw] max-w-[400px] h-screen flex flex-col
+        @apply fixed top-[81px] right-0 z-50 translate-x-[100%] bg-accent w-[65vw] max-w-[400px] h-screen flex flex-col
         place-items-center text-[18px] text-bg
         transition-transform duration-[.8s] ease-in-out
     }
