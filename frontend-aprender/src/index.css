@@ -2,6 +2,7 @@
 @plugin "daisyui" {
     themes: false;
 }
+@plugin "gridAreas";
 
 @theme {
     --color-bg: #FFFFFE;
@@ -35,6 +36,7 @@
     }
 
     .operativo-card {
-        @apply flex flex-col place-items-center
+        @apply flex flex-col place-items-center text-primary text-center font-medium w-[250px]
+        text-[14px] lg:text-[16px]
     }
 }
