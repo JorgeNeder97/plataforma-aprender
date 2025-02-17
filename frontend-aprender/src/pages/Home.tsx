@@ -1,17 +1,22 @@
-import { Hero } from '#components/Hero.tsx';
-import { Nav } from '#components/Nav.tsx';
-import { NavMobile } from '#components/NavMobile.tsx';
+import Hero from '#components/Hero.tsx';
+import Ingreso from '#components/Ingreso.tsx';
+import Nav from '#components/Nav.tsx';
+import NavMobile from '#components/NavMobile.tsx';
+import Operativos from '#components/Operativos.tsx';
 
-export const Home = () => {
+const Home = () => {
     return (
         <>
-            <header>
-                <Nav />
-                <NavMobile />
-            </header>
+            <NavMobile />
+            <Nav />
             <main>
                 <Hero />
+                <Ingreso />
+                <Operativos />
             </main>
         </>
     );
 };
+
+
+export default Home;

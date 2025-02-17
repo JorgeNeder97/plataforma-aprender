@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-    themes: false
+    themes: false;
 }
 
 @theme {
@@ -13,6 +13,13 @@
     --color-tertiary: #EF4565;
 
     --font-default: 'Poppins';
+
+    --text-title: 24px;
+    --text-title-sm: 32px;
+    --text-title-md: 40px;
+    --text-title-lg: 40px; 
+
+    --drop-shadow-1xl: '10px 10px 10px 10px #000000';
 }
 
 @layer components {
@@ -21,9 +28,13 @@
         hover:text-primary transition-all duration-[.3s] ease-in
     }
 
-    .menu-mobile {
-        @apply fixed top-[81px] right-0 z-50 translate-x-[100%] bg-accent w-[65vw] max-w-[400px] h-screen flex flex-col
+    .mobile-menu {
+        @apply fixed z-40 top-[81px] right-0 translate-x-[100%] bg-accent w-[65vw] max-w-[400px] h-screen flex flex-col
         place-items-center text-[18px] text-bg
         transition-transform duration-[.8s] ease-in-out
+    }
+
+    .operativo-card {
+        @apply flex flex-col place-items-center
     }
 }

@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import { Home } from '#pages/Home.tsx';
+import Home from '#pages/Home.tsx';
 
-export const MainApp = () => {
+const MainApp = () => {
   return (
     <>
         <Routes>
@@ -10,3 +10,5 @@ export const MainApp = () => {
     </>
   )
 }
+
+export default MainApp;
