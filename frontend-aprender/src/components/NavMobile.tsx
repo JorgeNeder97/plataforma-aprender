@@ -13,7 +13,7 @@ const NavMobile = () => {
     }
 
     return (
-        <header className="sticky top-[0px] lg:hidden bg-accent w-screen h-[80px] flex place-content-between place-items-center font-default">
+        <header className="sticky top-[0px] z-50 lg:hidden bg-accent w-screen h-[80px] flex place-content-between place-items-center font-default">
             <figure className="flex gap-[15px] pl-[15px] place-items-center">
                 <img src={Logo} className="max-w-[50px]" alt="Equipo Aprender - Logo" />
                 <h1 className="text-bg font-extrabold"><p className="text-[16px]">PLATAFORMA</p><p className="text-[16px]">APRENDER</p></h1>
@@ -47,7 +47,7 @@ const NavMobile = () => {
             <nav className="mobile-menu" ref={asideRef}>
                 <ul className="flex flex-col h-[50%] w-full place-content-evenly place-items-center">
                     <li><a className="nav-link" href="#operativos">Operativos 2025</a></li>
-                    <li><a className="nav-link" href="#sobreNosotros">Sobre Nosotros</a></li>
+                    <li><a className="nav-link" href="#sobreNosotrosMobile">Sobre Nosotros</a></li>
                     <li><a className="nav-link" href="#contactanos">Contactanos</a></li>
                     <li><a className="nav-link" href="#ingresa">Ingresá</a></li>
                 </ul>

@@ -2,7 +2,6 @@
 @plugin "daisyui" {
     themes: false;
 }
-@plugin "gridAreas";
 
 @theme {
     --color-bg: #FFFFFE;
@@ -18,7 +17,16 @@
     --text-title: 24px;
     --text-title-sm: 32px;
     --text-title-md: 40px;
-    --text-title-lg: 40px; 
+    --text-title-lg: 40px;
+    
+    --text-subtitle: 18px;
+    --text-subtitle-sm: 20px;
+    --text-subtitle-lg: 24px;
+
+    --text-paragraph-size: 12px;
+    --text-paragraph-sm: 14px;
+    --text-paragraph-md: 14px;
+    --text-paragraph-lg: 16px;
 
     --drop-shadow-1xl: '10px 10px 10px 10px #000000';
 }
@@ -27,6 +35,7 @@
     .nav-link {
         @apply text-bg font-medium text-[16px] outline-none
         hover:text-primary transition-all duration-[.3s] ease-in
+        active:scroll-smooth
     }
 
     .mobile-menu {
@@ -36,7 +45,15 @@
     }
 
     .operativo-card {
-        @apply flex flex-col place-items-center text-primary text-center font-medium w-[250px]
+        @apply flex flex-col place-items-center text-primary text-center font-medium min-w-[180px] max-w-[200px]
         text-[14px] lg:text-[16px]
+    }
+
+    .equipo-card {
+        @apply w-[80vw] max-w-[1200px] flex place-content-between 
+    }
+
+    .equipo-card-mobile {
+        @apply w-[85vw] max-w-[800px] flex flex-col gap-[30px]
     }
 }

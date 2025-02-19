@@ -1,8 +1,11 @@
+import Contactanos from '#components/Contactanos.tsx';
 import Hero from '#components/Hero.tsx';
 import Ingreso from '#components/Ingreso.tsx';
 import Nav from '#components/Nav.tsx';
 import NavMobile from '#components/NavMobile.tsx';
 import Operativos from '#components/Operativos.tsx';
+import SobreNosotros from '#components/SobreNosotros.tsx';
+import SobreNosotrosMobile from '#components/SobreNosotrosMobile.tsx';
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 
@@ -54,6 +57,13 @@ const Home = () => {
             delay: 300,
         });
 
+        sr.reveal('.contacto', {
+            origin: 'left',
+            interval: 100,
+            distance: '60px',
+            delay: 300,
+        });
+
         return () => {
             sr.destroy();
         };
@@ -67,7 +77,12 @@ const Home = () => {
                 <Hero />
                 <Ingreso />
                 <Operativos />
+                <SobreNosotros />
+                <SobreNosotrosMobile />
             </main>
+            <footer>
+                <Contactanos />
+            </footer>
         </>
     );
 };

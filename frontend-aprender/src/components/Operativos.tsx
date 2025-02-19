@@ -2,7 +2,7 @@ import ERCE from '#assets/Erce.png';
 
 const Operativos = () => {
     return (
-        <section className="max-w-screen font-default flex flex-col gap-[60px] lg:gap-[100px] place-items-center py-[60px] lg:py-[100px]">
+        <section id="operativos" className="max-w-screen font-default flex flex-col gap-[60px] lg:gap-[100px] place-items-center py-[60px] lg:py-[100px]">
             
             {/* Title */}
             <h3 className="titulo max-w-[400px] md:max-w-[500px] text-primary text-[24px] sm:text-[32px] md:text-[40px] font-semibold text-center lg:text-left py-[10px] md:py-0">OPERATIVOS 2025</h3>
