@@ -5,6 +5,13 @@ const userController = {
 
     },
 
+    teamLogin: (req, res) => {
+
+    },
+
+    schoolLogin: (req, res) => {
+
+    },
 
 }
 

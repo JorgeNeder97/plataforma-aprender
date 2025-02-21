@@ -5,6 +5,10 @@ const cruceController = require('#controllers/cruceController');
 const materialController = require('#controllers/materialController');
 
 
+// Logins
+router.post('/teamLogin', userController.teamLogin);
+router.post('/schoolLogin', userController.schoolLogin);
+
 // Datos del usuario
 router.post('/cambiarContraseña', userController.cambiarContraseña);
 
