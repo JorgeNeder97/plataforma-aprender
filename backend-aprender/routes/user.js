@@ -3,11 +3,12 @@ const router = express.Router();
 const userController = require('#controllers/userController');
 const cruceController = require('#controllers/cruceController');
 const materialController = require('#controllers/materialController');
-
+const teamUserLoginValidations = require('#validations/teamUserLoginValidations');
+const schoolUserLoginValidations = require('#validations/schoolUserLoginValidations');
 
 // Logins
-router.post('/teamLogin', userController.teamLogin);
-router.post('/schoolLogin', userController.schoolLogin);
+router.post('/teamLogin', teamUserLoginValidations, userController.teamLogin);
+router.post('/schoolLogin', schoolUserLoginValidations, userController.schoolLogin);
 
 // Datos del usuario
 router.post('/cambiarContraseña', userController.cambiarContraseña);

@@ -15,7 +15,10 @@ const TeamLogin = () => {
             teamPassword: data.teamPassword,
         };
 
-        // Listo para enviar el post a login (falta el controller)
+        // La información esta lista para enviar a la ruta post y el metodo de los controller esta creado
+        // y las validaciones hechas, solo queda agregar aqui las validaciones para mostrar los errores
+        // para esto, CREO que debemos utilizar redux toolkit, ya que en el proyecto eva peron usamos 
+        // conext(alternativa a redux) para mostrar los errores (ver el codigo de eva peron project).
         await teamLoginRequest(teamUser);
     });
 

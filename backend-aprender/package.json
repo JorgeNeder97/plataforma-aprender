@@ -8,7 +8,9 @@
   },
   "imports": {
     "#routes/*": "./routes/*.js",
-    "#controllers/*": "./controllers/*.js"
+    "#controllers/*": "./controllers/*.js",
+    "#models/*": "./database/models/*.js",
+    "#validations/*": "./middlewares/validations/*.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -16,6 +18,7 @@
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "^4.21.2",
+    "express-validator": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
     "moment-timezone": "^0.5.47",
     "morgan": "~1.9.1",
