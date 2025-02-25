@@ -88,7 +88,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'localidad_id',
         });
 
-        Cabecera.hasOne(models.Coodinador, {
+        Cabecera.hasOne(models.Coordinador, {
             as: 'cabecera_coordinador',
             foreignKey: 'coordinador_id',
         });

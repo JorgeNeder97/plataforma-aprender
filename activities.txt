@@ -1,0 +1,4 @@
+Ya se puede iniciar sesión, ahora debemos ver la forma de persistir la sesion, haciendo que redux persista los datos.
+
+pon esto en chatgpt: 
+como hacen las aplicaciones grandes como spotify para mantener la sesion activa? quiero trabajar en mi proyecto de la forma mas profesional posible

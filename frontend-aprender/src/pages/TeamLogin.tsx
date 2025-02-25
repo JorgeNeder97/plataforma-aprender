@@ -1,26 +1,38 @@
 import { Link } from 'react-router-dom';
 import LogoGrande from '#assets/Logo-Grande.png';
 import { useForm } from 'react-hook-form';
-import { teamLoginRequest } from '#services/teamServices.ts';
 import { TeamUser } from '#models/usuarios.ts';
-
+import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { loginTeamUser } from '../features/users/TeamUserSlice';
+import { teamLoginRequest } from '#services/userServices.ts';
+import { useState } from 'react';
 
 const TeamLogin = () => {
 
     const { register, handleSubmit, formState: {errors} } = useForm();
+    const [errorsBack, setErrorsBack] = useState();
+    const dispatch = useAppDispatch();
+    const user = useAppSelector(state => state.teamUsers);
 
     const onSubmit = handleSubmit(async data => {
         const teamUser: TeamUser = {
             teamUser: data.teamUser,
             teamPassword: data.teamPassword,
         };
+        
+        const response = await teamLoginRequest(teamUser);
+        console.log(response);
 
+        if(response.status == 200) {
+            dispatch(loginTeamUser(response.data));
+        }
         // La información esta lista para enviar a la ruta post y el metodo de los controller esta creado
         // y las validaciones hechas, solo queda agregar aqui las validaciones para mostrar los errores
         // para esto, CREO que debemos utilizar redux toolkit, ya que en el proyecto eva peron usamos 
         // conext(alternativa a redux) para mostrar los errores (ver el codigo de eva peron project).
-        await teamLoginRequest(teamUser);
     });
+
+    console.log(user);
 
     return (
         <section className="bg-primary min-h-[100vh] flex flex-col place-items-center place-content-center gap-[100px] font-default">
@@ -58,7 +70,7 @@ const TeamLogin = () => {
                             }
                         })}
                     />
-                    <span className="text-paragraph-size text-tertiary">This may contain an error</span>
+                    <span className={`text-paragraph-size text-tertiary ${errors && errors.data}`}>This may contain an error</span>
                 </div>
 
                 {/* Contraseña */}

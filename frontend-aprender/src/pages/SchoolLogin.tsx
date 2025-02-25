@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import LogoGrande from '#assets/Logo-Grande.png';
 
 
-const UserLogin = () => {
+const SchoolLogin = () => {
 
     const handleSubmit = (e:FormEvent) => {
         e.preventDefault();
@@ -58,4 +58,4 @@ const UserLogin = () => {
     );
 };
 
-export default UserLogin;
+export default SchoolLogin;

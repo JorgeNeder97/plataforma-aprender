@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('#controllers/userController');
-const cruceController = require('#controllers/cruceController');
-const materialController = require('#controllers/materialController');
-const teamUserLoginValidations = require('#validations/teamUserLoginValidations');
-const schoolUserLoginValidations = require('#validations/schoolUserLoginValidations');
+const userController = require('../controllers/userController');
+const cruceController = require('../controllers/cruceController');
+const materialController = require('../controllers/materialController');
+const teamUserLoginValidations = require('../middlewares/validations/teamUserLoginValidations');
+const schoolUserLoginValidations = require('../middlewares/validations/schoolUserLoginValidations');
 
 // Logins
 router.post('/teamLogin', teamUserLoginValidations, userController.teamLogin);

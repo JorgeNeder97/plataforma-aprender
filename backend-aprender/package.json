@@ -6,12 +6,6 @@
     "start": "node ./bin/www",
     "test": "nodemon ./bin/www"
   },
-  "imports": {
-    "#routes/*": "./routes/*.js",
-    "#controllers/*": "./controllers/*.js",
-    "#models/*": "./database/models/*.js",
-    "#validations/*": "./middlewares/validations/*.js"
-  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",

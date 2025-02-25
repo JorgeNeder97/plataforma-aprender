@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const formController = require('#controllers/formController');
-const aplicadorController = require('#controllers/aplicadorController');
-const veedorController = require('#controllers/veedorController');
+const formController = require('../controllers/formController');
+const aplicadorController = require('../controllers/aplicadorController');
+const veedorController = require('../controllers/veedorController');
 
 
 

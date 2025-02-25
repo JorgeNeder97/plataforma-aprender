@@ -65,7 +65,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'operativo_id',
         });
 
-        Operativo.hasMany(models.Cruces, {
+        Operativo.hasMany(models.Cruce, {
             as: 'cruce_operativo',
             foreignKey: 'operativo_id',
         });

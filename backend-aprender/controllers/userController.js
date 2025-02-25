@@ -1,4 +1,4 @@
-const db = require('#models');
+const db = require('../database/models');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
@@ -17,8 +17,8 @@ const userController = {
 
         if(!errors.isEmpty()) return res.json({ errors: errors.mapped() });
 
-        const userForm = req.teamUser;
-        const passForm = req.teamPassword;
+        const userForm = req.body.teamUser;
+        const passForm = req.body.teamPassword;
 
         try {
 
@@ -33,7 +33,14 @@ const userController = {
                 if(!isValidPassword) return res.status(400).json({ message: 'Invalid Credentials'});
     
                 const teamUserToken = jwt.sign({ teamUser: userDB.nombre }, TOKEN, { expiresIn: '7d' });
-                res.cookie("teamUserToken", teamUserToken);
+                res.cookie("teamUserToken", teamUserToken, {
+                    httpOnly: true,
+                });
+                return res.json({
+                    userName: userDB.nombre,
+                    type: 'Team',
+                    isAuthenticated: true,
+                });
             }
         } catch (error) {
             res.status(500).json({ message: error.message });

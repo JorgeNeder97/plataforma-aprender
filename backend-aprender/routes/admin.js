@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const adminController = require('#controllers/adminController');
-const operativoController = require('#controllers/operativoController');
-const localidadController = require('#controllers/localidadController');
-const escuelaController = require('#controllers/escuelaController');
-const seccionController = require('#controllers/seccionController');
-const cabeceraController = require('#controllers/cabeceraController');
-const coordinadorController = require('#controllers/coordinadorController');
-const datosEstadisticosController = require('#controllers/datosEstadisticosController');
+const adminController = require('../controllers/adminController');
+const operativoController = require('../controllers/operativoController');
+const localidadController = require('../controllers/localidadController');
+const escuelaController = require('../controllers/escuelaController');
+const seccionController = require('../controllers/seccionController');
+const cabeceraController = require('../controllers/cabeceraController');
+const coordinadorController = require('../controllers/coordinadorController');
+const datosEstadisticosController = require('../controllers/datosEstadisticosController');
 
 
 
