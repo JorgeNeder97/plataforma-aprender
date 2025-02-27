@@ -8,7 +8,12 @@ const schoolUserLoginValidations = require('../middlewares/validations/schoolUse
 
 // Logins
 router.post('/teamLogin', teamUserLoginValidations, userController.teamLogin);
+router.get('/teamRefresh', userController.teamRefreshToken);
+router.post('/teamLogout', userController.teamLogout);
+
 router.post('/schoolLogin', schoolUserLoginValidations, userController.schoolLogin);
+router.get('/schoolRefresh', userController.schoolRefreshToken);
+router.post('/schoolLogout', userController.schoolLogout);
 
 // Datos del usuario
 router.post('/cambiarContraseña', userController.cambiarContraseña);

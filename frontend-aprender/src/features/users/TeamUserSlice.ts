@@ -1,9 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { TeamUser, userAuth } from '#models/usuarios.ts';
+import { TeamUser, teamUserAuth } from '#models/usuarios.ts';
 
-const initialState: userAuth = {
-    userName: '',
-    type: '',
+const initialState: teamUserAuth = {
+    teamAccessToken: '',
     isAuthenticated: false,
 }
 

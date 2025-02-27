@@ -24,7 +24,7 @@ const TeamLogin = () => {
         console.log(response);
 
         if(response.status == 200) {
-            dispatch(loginTeamUser(response.data));
+            dispatch(loginTeamUser(response));
         }
         // La información esta lista para enviar a la ruta post y el metodo de los controller esta creado
         // y las validaciones hechas, solo queda agregar aqui las validaciones para mostrar los errores

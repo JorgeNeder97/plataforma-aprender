@@ -1,9 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { SchoolUser, userAuth } from '#models/usuarios.ts';
+import { SchoolUser, schoolUserAuth } from '#models/usuarios.ts';
 
-const initialState: userAuth = {
-    userName: '',
-    type: '',
+const initialState: schoolUserAuth = {
+    schoolAccessToken: '',
     isAuthenticated: false,
 };
 
@@ -12,7 +11,7 @@ export const schoolUserSlice = createSlice({
     initialState,
     reducers: {
         loginSchoolUser: (state, action: PayloadAction<SchoolUser>) => {
-            
+            return { ...state, ...action.payload };
         },
         logoutSchoolUser: () => {
             initialState;

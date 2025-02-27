@@ -8,8 +8,12 @@ export interface SchoolUser {
     schoolPassword: string,
 };
 
-export interface userAuth {
-    userName: string,
-    type: string,
+export interface teamUserAuth {
+    teamAccessToken: string,
     isAuthenticated: boolean,
-}
+};
+
+export interface schoolUserAuth {
+    schoolAccessToken: string,
+    isAuthenticated: boolean,
+};
