@@ -2,3 +2,18 @@ Ya se puede iniciar sesión, ahora debemos ver la forma de persistir la sesion, 
 
 pon esto en chatgpt: 
 como hacen las aplicaciones grandes como spotify para mantener la sesion activa? quiero trabajar en mi proyecto de la forma mas profesional posible
+
+
+
+Se consiguió hacer el login, pero hay que analizar la seguridad sobre poner isAuthenticated "true" en el localStorage sin antes verificar que el token sea valido.
+El flujo del token esta hecho, hay que comprobar si funciona y es el siguiente:
+
+El frontend manda la solicitud de login.
+El backend la aprueba y manda un accessToken de 15min y guarda en el localStorage un accessToken de 7dias (este ultimo es el "refreshToken")
+En cada peticion de axios hay un interceptor para el request y uno para el response, estos verifican si caducó el accessToken y si es así y el backend nos envía una respuesta status 401 el interceptor verifica si existe un accessToken en el localStorage y lo verifica (verifica que sea valido, este paso no se si está hecho pero debería estarlo), si es valido lo aprueba y le genera otro accessToken, sino lo desloguea y lo manda al login.
+
+Mientras que las peticiones a rutas protegidas del backend dependen del accessToken, las peticiones a 
+rutas protegidas del frontend dependen de la propiedad isAuthenticated, la cual hay que tratar con pinzas
+y pensar bien como relacionarla directamente a la validez del accessToken alojado en el localStorage, ya
+que sin estos cuidados estan simple como hacer localStorage.setItem("isAuthenticated", "true") para poder
+acceder a las rutas protegidas del frontend.

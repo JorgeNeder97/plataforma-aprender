@@ -12,7 +12,7 @@ export const teamLoginRequest = async (data: TeamUser) => {
 
     // This will save the accessToken in localStorage.
     localStorage.setItem("teamAccessToken", response.data.teamAccessToken);
-
+    localStorage.setItem("isAuthenticated", "true");
     return response.data;
 };
 
@@ -21,6 +21,7 @@ export const teamRefreshToken = async () => {
 
     // This will save the accessToken in localStorage
     localStorage.setItem("teamAccessToken", response.data.teamAccessToken);
+    localStorage.setItem("isAuthenticated", "true");
 
     return response.data;
 };

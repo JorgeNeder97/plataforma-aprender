@@ -46,7 +46,6 @@ const userController = {
 
                 return res.json({
                     teamAccessToken,
-                    type: 'Team',
                     isAuthenticated: true,
                 });
             }
@@ -65,7 +64,6 @@ const userController = {
             const teamAccessToken = generateAccessToken(user);
             res.json({
                 teamAccessToken,
-                type: "Team",
                 isAuthenticated: true,
             });
         });
@@ -106,7 +104,6 @@ const userController = {
 
                 return res.json({
                     schoolAccessToken,
-                    type: "School",
                     isAuthenticated: true,
                 });
             }
@@ -125,7 +122,6 @@ const userController = {
             const schoolAccessToken = generateAccessToken(user);
             res.json({
                 schoolAccessToken,
-                type: "Team",
                 isAuthenticated: true,
             });
         });
