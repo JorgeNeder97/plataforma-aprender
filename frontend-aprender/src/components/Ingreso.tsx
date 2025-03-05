@@ -1,8 +1,14 @@
 import Team from '#assets/Team.png';
 import School from '#assets/School.png';
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '#hook';
 
 const Ingreso = () => {
+
+    const teamUser = useAppSelector(state => state.teamUsers);
+    const schoolUser = useAppSelector(state => state.schoolUsers);
+
+
     return (
         <section id="ingresa" className="bg-bg-alter font-default max-w-screen py-[60px] pb-[80px] lg:py-[100px] flex flex-col gap-[40px] lg:gap-[100px] place-content-center place-items-center">
             
@@ -24,7 +30,7 @@ const Ingreso = () => {
                     <p className="text-paragraph text-[12px] lg:text-[14px] text-justify lg:w-[320px]">Si sos <strong>Rector/a</strong> o <strong>Director/a</strong> de una <strong>institución</strong> debes
                     ingresar haciendo click en el botón de abajo.</p>
                     
-                    <button className="bg-accent text-[12px] lg:text-[14px] text-bg font-medium px-[15px] lg:px-[30px] py-[5px] lg:py-[15px] rounded-[3px] lg:rounded-[5px] shadow-sm shadow-shadows hover:bg-accent-hover hover:cursor-pointer transition-all duration-[.3s] ease-in-out"><Link to="/userLogin">INICIAR SESIÓN</Link></button>
+                    <Link to="/userLogin"><button className="bg-accent text-[12px] lg:text-[14px] text-bg font-medium px-[15px] min-w-[148px] lg:px-[30px] lg:min-w-[178px] py-[5px] lg:py-[15px] rounded-[3px] lg:rounded-[5px] shadow-sm shadow-shadows hover:bg-accent-hover hover:cursor-pointer transition-all duration-[.3s] ease-in-out">{schoolUser.isAuthenticated ? "INGRESAR" : "INICIAR SESIÓN"}</button></Link>
                 
                 </div>
 
@@ -39,7 +45,7 @@ const Ingreso = () => {
                     
                     <p className="text-paragraph text-[12px] lg:text-[14px] text-justify lg:w-[320px]">Si formas parte del <strong>Equipo Aprender</strong> debes iniciar sesión haciendo click en el botón de abajo.</p>
                     
-                    <button className="bg-accent text-[12px] lg:text-[14px] text-bg font-medium px-[15px] lg:px-[30px] py-[5px] lg:py-[15px] rounded-[3px] lg:rounded-[5px] shadow-sm shadow-shadows hover:bg-accent-hover hover:cursor-pointer transition-all duration-[.3s] ease-in-out"><Link to="/TeamLogin">INICIAR SESIÓN</Link></button>
+                    <Link to="/TeamLogin"><button className="bg-accent text-[12px] lg:text-[14px] text-bg font-medium px-[15px] min-w-[148px] lg:px-[30px] lg:min-w-[178px] py-[5px] lg:py-[15px] rounded-[3px] lg:rounded-[5px] shadow-sm shadow-shadows hover:bg-accent-hover hover:cursor-pointer transition-all duration-[.3s] ease-in-out">{teamUser.isAuthenticated ? "INGRESAR" : "INICIAR SESIÓN"}</button></Link>
                 
                 </div>
 

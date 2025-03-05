@@ -1,3 +1,4 @@
+const db = require("../database/models");
 
 const escuelaController = {
     crearEscuela: (req, res) => {
@@ -12,8 +13,9 @@ const escuelaController = {
     obtenerEscuela: (req, res) => {
 
     },
-    obtenerEscuelas: (req, res) => {
-
+    obtenerEscuelas: async (req, res) => {
+        const escuelas = await db.Escuela.findAll();
+        return res.json({ escuelas });
     },
 }
 

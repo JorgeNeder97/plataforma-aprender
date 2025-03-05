@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "#pages/Home.tsx";
 import TeamLogin from "#pages/TeamLogin.tsx";
 import SchoolLogin from "#pages/SchoolLogin.tsx";
-import TeamProtectedRoute from '#pages/TeamProtectedRoute.tsx';
+import TeamProtectedRoute from '#pages/TeamUser/TeamProtectedRoute.tsx';
 import TeamHome from "#pages/TeamUser/TeamHome.tsx";
 
 

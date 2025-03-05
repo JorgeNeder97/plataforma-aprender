@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import LogoGrande from '#assets/Logo-Grande.png';
 import { useForm } from 'react-hook-form';
 import { TeamUser } from '#models/usuarios.ts';
-import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { useAppDispatch, useAppSelector } from '#hook';
 import { loginTeamUser } from '../features/users/TeamUserSlice';
 import { teamLoginRequest } from '#services/userServices.ts';
 import { useState } from 'react';
@@ -11,30 +11,33 @@ const TeamLogin = () => {
 
     const { register, handleSubmit, formState: {errors} } = useForm();
     const [errorsBack, setErrorsBack] = useState();
+
+    const navigate = useNavigate();
+
     const dispatch = useAppDispatch();
     const user = useAppSelector(state => state.teamUsers);
 
+    // handle submit
     const onSubmit = handleSubmit(async data => {
+
+        // Create de user
         const teamUser: TeamUser = {
             teamUser: data.teamUser,
             teamPassword: data.teamPassword,
         };
         
+        // Send it to Login Route
         const response = await teamLoginRequest(teamUser);
-        console.log(response);
 
-        if(response.status == 200) {
-            dispatch(loginTeamUser(response));
-        }
-        // La información esta lista para enviar a la ruta post y el metodo de los controller esta creado
-        // y las validaciones hechas, solo queda agregar aqui las validaciones para mostrar los errores
-        // para esto, CREO que debemos utilizar redux toolkit, ya que en el proyecto eva peron usamos 
-        // conext(alternativa a redux) para mostrar los errores (ver el codigo de eva peron project).
+        // Set the user in Redux
+        dispatch(loginTeamUser(response));
+
+        // Send the user to the TeamHome page
+        navigate("/teamHome");
     });
 
-    console.log(user);
-
-    return (
+    if(user.isAuthenticated) return <Navigate to="/teamHome" replace />;
+    else return (
         <section className="bg-primary min-h-[100vh] flex flex-col place-items-center place-content-center gap-[100px] font-default">
 
             {/* Volver Atras Btn */}

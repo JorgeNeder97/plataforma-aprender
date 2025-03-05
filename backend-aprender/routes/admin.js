@@ -8,7 +8,7 @@ const seccionController = require('../controllers/seccionController');
 const cabeceraController = require('../controllers/cabeceraController');
 const coordinadorController = require('../controllers/coordinadorController');
 const datosEstadisticosController = require('../controllers/datosEstadisticosController');
-
+const verifyTeamToken = require("../middlewares/auth/teamUserAuthMiddleware");
 
 
 // Usuarios
@@ -35,7 +35,7 @@ router.delete('/eliminarLocalidad/:id', localidadController.eliminarLocalidad);
 
 // Escuelas
 router.get('/obtenerEscuela/:id', escuelaController.obtenerEscuela);
-router.get('/obtenerEscuelas', escuelaController.obtenerEscuelas);
+router.get('/obtenerEscuelas', verifyTeamToken, escuelaController.obtenerEscuelas);
 router.post('/crearEscuela', escuelaController.crearEscuela);
 router.patch('/modificarEscuela/:id', escuelaController.modificarEscuela);
 router.delete('/eliminarEscuela/:id', escuelaController.eliminarEscuela);

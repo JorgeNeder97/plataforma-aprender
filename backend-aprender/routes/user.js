@@ -5,11 +5,13 @@ const cruceController = require('../controllers/cruceController');
 const materialController = require('../controllers/materialController');
 const teamUserLoginValidations = require('../middlewares/validations/teamUserLoginValidations');
 const schoolUserLoginValidations = require('../middlewares/validations/schoolUserLoginValidations');
+const verifyTeamToken = require('../middlewares/auth/teamUserAuthMiddleware');
+
 
 // Logins
 router.post('/teamLogin', teamUserLoginValidations, userController.teamLogin);
-router.get('/teamRefresh', userController.teamRefreshToken);
-router.post('/teamLogout', userController.teamLogout);
+router.post('/teamRefresh', userController.teamRefreshToken); // teamRefresh should not have any auth middleware.
+router.post('/teamLogout', verifyTeamToken, userController.teamLogout);
 
 router.post('/schoolLogin', schoolUserLoginValidations, userController.schoolLogin);
 router.get('/schoolRefresh', userController.schoolRefreshToken);

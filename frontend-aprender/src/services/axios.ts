@@ -1,8 +1,9 @@
 import axios from 'axios';
-import { useAppSelector, useAppDispatch } from '../app/hooks';
-import { loginTeamUser, logoutTeamUser } from '#features/users/TeamUserSlice.ts';
-import { loginSchoolUser, logoutSchoolUser } from '#features/users/SchoolUserSlice.ts';
-import { useNavigate } from 'react-router-dom';
+import { store } from '#store';
+import { teamRefreshTokenRequest } from './userServices';
+import { jwtDecode } from 'jwt-decode';
+import { refreshTeamToken } from '#features/users/TeamUserSlice.ts';
+import { teamUserAuth } from '#models/usuarios.ts';
 
 const baseURL = 'http://localhost:3000';
 
@@ -11,65 +12,62 @@ const instance = axios.create({
     withCredentials: true,
     headers: {
         'Content-Type': 'multipart/form-data',
-    }
+    },
 });
 
-// Variable to avoid multiple retries
-let isRefreshing = false;
+export const axiosJWT = axios.create({
+    baseURL: baseURL,
+    withCredentials: true,
+    headers: {
+        'Content-Type': 'multipart/form-data',
+    },
+});
 
+// This makes automatic the refresh of the tokens. For protected routes we must use axiosJWT.
+axiosJWT.interceptors.request.use(
 
-// Custom hook to get the instance with navigation
-export const useInstance = () => {
-    const navigate = useNavigate();
-    const dispatch = useAppDispatch();
-    const accessToken = useAppSelector(state => state.teamUsers.teamAccessToken);
+    async (config) => {
+    
+        // get the user from redux in a variable
+        const user: teamUserAuth = store.getState().teamUsers;
+        
+        // get the tokens from redux
+        const { teamRefreshToken, teamAccessToken } = store.getState().teamUsers;
 
-    // Interceptor to add the token in every request
-    instance.interceptors.request.use((config) => {
-        if(accessToken) {
-            config.headers["Authorization"] = `Bearer ${accessToken}`;
+        // if user doesn't exist reject the promise
+        if (!user) {
+            return Promise.reject('No access token found.');
         }
 
+        // create a new Date to compare with the expiration time of the accessToken
+        let currentDate = new Date();
+
+        // decode the accessToken to get the expiration time of it.
+        const decodedToken = jwtDecode(teamAccessToken);
+
+        // if the expiration time is less than the current time means the accessToken has been expired.
+        if(decodedToken.exp && decodedToken.exp * 1000 < currentDate.getTime()){
+
+            // send a post http request to refresh the tokens (it's important to send the token inside an object).
+            const response = await teamRefreshTokenRequest({ teamRefreshToken });
+
+            // set the authorization header with the accessToken
+            config.headers["Authorization"] = `Bearer ${response.teamAccessToken}`;
+
+            // Update redux state with new access & refresh tokens
+            store.dispatch(refreshTeamToken({
+                userId: user.userId,
+                userName: user.userName,
+                teamAccessToken: response.teamAccessToken,
+                teamRefreshToken: response.teamRefreshToken,
+                isAuthenticated: true,
+            }));
+        }
         return config;
-    });
-
-
-    instance.interceptors.response.use(
-        (response) => response,
-        async (error) => {
-            const originalRequest = error.config;
-
-            if(error.response?.status === 401 && !isRefreshing) {
-                isRefreshing = true;
-
-                try {
-
-                    const response = await axios.get(
-                        "http://localhost:3000/user/teamRefresh", { withCredentials: true }
-                    );
-
-                    dispatch(loginTeamUser(response.data));
-
-                    originalRequest.headers["Authorization"] = `Bearer ${response.data.teamAccessToken}`;
-
-                    isRefreshing = false;
-
-                    return instance(originalRequest);
-                } catch (refreshError) {
-                    isRefreshing = false;
-                    console.error("Error al refrescar el token, redirigiendo al login.");
-                    dispatch(logoutTeamUser());
-                    navigate("/user/teamLogin");
-                    return Promise.reject(refreshError);
-                }
-            }
-            
-            return Promise.reject(error);
-        }
-    );
-
-    return instance;
-}
-
+    },
+    (error) => {
+        return Promise.reject(error);
+    }
+)
 
 export default instance;

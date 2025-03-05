@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TeamUser, teamUserAuth } from '#models/usuarios.ts';
 
-const storedToken = localStorage.getItem("teamAccessToken");
-const storedAuth = localStorage.getItem("isAuthenticated") === "true";
 
 const initialState: teamUserAuth = {
-    teamAccessToken: storedToken || '',
-    isAuthenticated: storedAuth || false,
+    teamAccessToken: '',
+    teamRefreshToken: '',
+    userId: '',
+    userName: '',
+    isAuthenticated: false,
 }
 
 export const teamUserSlice = createSlice({
@@ -16,12 +17,19 @@ export const teamUserSlice = createSlice({
         loginTeamUser: (state, action: PayloadAction<TeamUser>) => {
             return { ...state, ...action.payload};
         },
-        logoutTeamUser: () => {
-            initialState;
+        refreshTeamToken: (state, action: PayloadAction<teamUserAuth>) => {
+            return { ...state, ...action.payload};
+        },
+        logoutTeamUser: (state) => {
+            state.teamAccessToken = '',
+            state.teamRefreshToken = '',
+            state.userId = '',
+            state.userName = '',
+            state.isAuthenticated = false
         },
     }
 });
 
-export const { loginTeamUser, logoutTeamUser } = teamUserSlice.actions;
+export const { loginTeamUser, refreshTeamToken, logoutTeamUser } = teamUserSlice.actions;
 
 export default teamUserSlice.reducer;

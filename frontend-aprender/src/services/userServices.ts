@@ -1,6 +1,8 @@
 import axios from '#services/axios.ts';
+import { axiosJWT } from '#services/axios.ts';
 import { TeamUser } from '#models/usuarios.ts';
 import { SchoolUser } from '#models/usuarios.ts';
+import { store } from '#store';
 
 
 export const teamLoginRequest = async (data: TeamUser) => {
@@ -10,19 +12,16 @@ export const teamLoginRequest = async (data: TeamUser) => {
         },
     });
 
-    // This will save the accessToken in localStorage.
-    localStorage.setItem("teamAccessToken", response.data.teamAccessToken);
-    localStorage.setItem("isAuthenticated", "true");
     return response.data;
 };
 
-export const teamRefreshToken = async () => {
-    const response = await axios.get('/teamRefresh');
-
-    // This will save the accessToken in localStorage
-    localStorage.setItem("teamAccessToken", response.data.teamAccessToken);
-    localStorage.setItem("isAuthenticated", "true");
-
+export const teamRefreshTokenRequest = async (teamRefreshToken: {}) => {
+    const response = await axios.post('/user/teamRefresh', teamRefreshToken, {
+        headers: {
+            // This one is very necessary...
+            "Content-Type": "application/json",
+        },
+    });
     return response.data;
 };
 
@@ -41,7 +40,7 @@ export const schoolLoginRequest = async (data: SchoolUser) => {
 };
 
 export const schoolRefreshToken = async () => {
-    const response = await axios.get('/schoolRefresh');
+    const response = await axios.get('/user/schoolRefresh');
 
     // This will save the accessToken in localStorage
     localStorage.setItem("schoolAccessToken", response.data.schoolAccessToken);
@@ -49,21 +48,15 @@ export const schoolRefreshToken = async () => {
     return response.data;
 };
 
-// IMPORTANTE - IMPORTANTE - IMPORTANTE - IMPORTANTE - IMPORTANTE - IMPORTANTE - IMPORTANTE - IMPORTANTE
+// Esta request es de prueba para probar el funcionamiento de los tokens.
 
-// Cada vez que se haga una petición a una ruta protegida se debe incluir el accessToken en los headers:
-// const teamToken = localStorage.getItem("teamAccessToken");
+export const obEsc = async () => {
+    const token = store.getState().teamUsers.teamAccessToken;
+    const res = await axiosJWT.get('/admin/obtenerEscuelas', {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        }
+    });
 
-// const response = await axios.get('/escuelas', {
-//     headers: { Authorization: `Bearer ${teamToken}` },
-// });
-
-
-// o en el caso de un usuario de escuela:
-// const schoolToken = localStorage.getItem("schoolAccessToken");
-
-// const response = await axios.get('/cabecera', {
-//     headers: { Authorization: `Bearer ${schoolToken}` },
-// });
-
-// en tu cuenta de chatgpt una busqueda que diga "Mantenimiento de sesion ..."
+    return res.data;
+}

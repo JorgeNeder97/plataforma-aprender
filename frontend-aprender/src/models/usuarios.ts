@@ -10,6 +10,9 @@ export interface SchoolUser {
 
 export interface teamUserAuth {
     teamAccessToken: string,
+    teamRefreshToken: string,
+    userId: string,
+    userName: string,
     isAuthenticated: boolean,
 };
 
